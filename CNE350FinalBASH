@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# Store the log file in a directory that is a variable
+log_directory="/var/log/vnstat"
+
+# Log directory creation
+mkdir -p "$log_directory"
+
+# Name log file
+log_file="$log_directory/vnstat_log.txt"
+
+# Update and install vnstat
+sudo apt-get update
+sudo apt-get install -y vnstat
+
+# Wifi initialization of vnstat database using wlan0
+sudo vnstat -u -i wlan0
+
+# Run vnstat every 5 minutes and save the logs to the file defined above
+# Deletes data that is older than 366 days
+(crontab -l ; echo "*/5 * * * * /usr/bin/vnstat --delete -d 366d > /dev/null 2>&1 && /usr/bin/vnstat -u > $log_file 2>&1") | crontab -
+
+# Script needs executable permissions
+# chmod +x cne350final_monitoring.sh
+
+# Run script as sudo
+# sudo ./cne350final_monitoring.sh
