@@ -1,6 +1,6 @@
 #!/bin/bash
 
-LOG=/var/log/vnstat_logs/bandwidth_usage_$(date +%Y%m%d).csv
+LOG=/var/log/vnstat_logs/bandwidth_usage_$(date +%Y%m%d_%I%M%S_%p).csv
 
 if [ ! -d "/var/log/vnstat_logs" ]; then
     mkdir "/var/log/vnstat_logs"
