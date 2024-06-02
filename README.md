@@ -16,3 +16,6 @@ Step 7
 Press control and letter x together exit the script
 Step 8
 chmod +x cne350final
+Step 9
+sudo ./cne350final
+and enter sudo password and be patient as this may take some time. 
