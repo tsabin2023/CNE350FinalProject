@@ -1,2 +1,4 @@
 # CNE350FinalProject
 CNE350FinalProjectSpringQuarter2024
+Step 1
+mkdir cne350final
