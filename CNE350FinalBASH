@@ -13,8 +13,8 @@ log_file="$log_directory/vnstat_log.txt"
 sudo apt-get update
 sudo apt-get install -y vnstat
 
-# Initialize vnstat database for the interface (replace wlan0 with your interface if needed)
-sudo vnstat -i wlan0
+# Initialize vnstat database for all available interfaces
+sudo vnstat -u
 
 # Run vnstat every 5 minutes and save the logs to the file defined above
 # Deletes data that is older than 366 days
