@@ -14,3 +14,5 @@ Step 6
 Press the enter buttom
 Step 7
 Press control and letter x together exit the script
+Step 8
+chmod +x cne350final
