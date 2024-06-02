@@ -1,27 +1,17 @@
 #!/bin/bash
 
-# Store the log file in a directory that is a variable
-log_directory="/var/log/vnstat"
+LOG=/var/log/vnstat_logs/bandwidth_usage_$(date +%Y%m%d).csv
 
-# Log directory creation
-mkdir -p "$log_directory"
-
-# Name log file
-log_file="$log_directory/vnstat_log.txt"
-
-# Update and install vnstat
-sudo apt-get update
-sudo apt-get install -y vnstat
-
-# Check if the cron job already exists
-if ! crontab -l | grep -q '/usr/bin/vnstat --delete -d 366d > /dev/null 2>&1 && /usr/bin/vnstat > $log_file 2>&1'; then
-    # Run vnstat every 5 minutes and save the logs to the file defined above
-    # Deletes data that is older than 366 days
-    (crontab -l ; echo "*/5 * * * * /usr/bin/vnstat --delete -d 366d > /dev/null 2>&1 && /usr/bin/vnstat > $log_file 2>&1") | crontab -
+if [ ! -d "/var/log/vnstat_logs" ]; then
+    mkdir "/var/log/vnstat_logs"
+    echo "Directory /var/log/vnstat_logs created." 
 fi
 
-# Script needs executable permissions
-#chmod +x cne350final.sh
+echo -n "$(date --rfc-3339=date)," >> $LOG
 
-# Run script as sudo
-#./cne350final.sh
+awk '/^\s*enp0s3:/ { # replace with interface (e.g. enp0s3)
+    RX=$2/1024/1024
+    TX=$10/1024/1024
+    TOTAL=RX+TX
+    print "\nRX: " , RX , " MiB\n" , "TX: " , TX ," MiB\n" , "Total (RX + TX): " , TOTAL
+}' /proc/net/dev >> $LOG
