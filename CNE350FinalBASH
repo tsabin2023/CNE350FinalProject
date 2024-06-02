@@ -21,7 +21,7 @@ if ! crontab -l | grep -q '/usr/bin/vnstat --delete -d 366d > /dev/null 2>&1 && 
 fi
 
 # Script needs executable permissions
-chmod +x cne350final.sh
+#chmod +x cne350final.sh
 
 # Run script as sudo
-./cne350final.sh
+#./cne350final.sh
