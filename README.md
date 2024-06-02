@@ -16,3 +16,6 @@ Step 7
 Press control and letter x together exit the script
 Step 8
 chmod +x cne350final.sh
+Step 9
+./cne350final.sh
+Be patient as this may take some time. 
