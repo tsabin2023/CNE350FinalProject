@@ -18,7 +18,7 @@ sudo apt-get install -y vnstat
 (crontab -l ; echo "*/5 * * * * /usr/bin/vnstat --delete -d 366d > /dev/null 2>&1 && /usr/bin/vnstat > $log_file 2>&1") | crontab -
 
 # Script needs executable permissions
-# chmod +x cne350final_monitoring.sh
+chmod +x cne350final.sh
 
 # Run script as sudo
-# sudo ./cne350final_monitoring.sh
+sudo ./cne350final.sh
