@@ -2,14 +2,9 @@
 
 LOG=/var/log/vnstat_logs/bandwidth_usage_$(date +%Y%m%d_%I%M%S_%p).csv
 
-if [ ! -d "/var/log/vnstat_logs" ]; then
-    mkdir "/var/log/vnstat_logs"
-    echo "Directory /var/log/vnstat_logs created." 
-fi
-
 echo -n "$(date --rfc-3339=date)," >> $LOG
 
-awk '/^\s*enp0s3:/ { # replace with interface (e.g. enp0s3)
+awk '/^\s*enp0s3:/ { # UPDATE THIS, REPLACE THE INTERFACE (e.g. replace enp0s3)
     RX=$2/1024/1024
     TX=$10/1024/1024
     TOTAL=RX+TX
