@@ -1,6 +1,6 @@
-#!/bin/bash
+!/bin/bash
 
-script_path="./CNE350FinalBASH.sh"
+script_path="~/CNE350FinalProject/CNE350FinalBASH.sh"
 
 cron_job="*/1 * * * * $script_path"
 
