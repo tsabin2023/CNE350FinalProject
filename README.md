@@ -1,21 +1,47 @@
-# CNE350FinalProject
-CNE350FinalProjectSpringQuarter2024
-Step 1
-mkdir cne350final
-Step 2
-cd cne350final
-Step 3
-nano cne350final.sh
-Step 4
-Copy and paste code from CNE350FinalBASH from this repo into the black script you just created
-Step 5 
-Press control and letter o together to write out this code to the script
-Step 6
-Press the enter buttom
-Step 7
-Press control and letter x together exit the script
-Step 8
-chmod +x cne350final.sh
-Step 9
-./cne350final.sh
-Be patient as this may take some time. 
+# setup
+
+git clone https://github.com/tsabin2023/CNE350FinalProject
+
+cd CNE350FinalProject
+
+(all commands below are executed inside CNE350FinalProject directory)
+
+sudo apt update
+
+sudo apt install -y vnstat
+
+sudo mkdir /var/log/vnstat_logs
+
+sudo chmod o+w /var/log/vnstat_logs
+
+sudo chmod +x CNE350FinalBASH.sh
+
+sudo chmod +x run_cronjob.sh
+
+
+# modify bash script / part 1 file - the inferface
+
+
+ifconfig - select the interface you want to record
+
+sudo nano CNE350FinalBASH - modify the interface, same line as the comment
+
+
+# how to run the cronjob
+
+./run_cronjob.sh
+
+
+
+# to verify / check your log files
+
+cd /var/log/vnstat_logs
+
+ls
+
+
+
+# extra commands
+
+crontab -l
+crontab -r
