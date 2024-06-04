@@ -14,6 +14,6 @@ echo "cron job added:"
 
 echo "$cron_job"
 
-find "$log_directory" -type f -name "$file_pattern" -mtime +1 -exec rm {} \;
+find /var/log/vnstat_logs -name "bandwidth_usage_*.csv" -type f -mtime 1 -exec rm {} \;
 
 echo "log files older than 366 days have been deleted."
