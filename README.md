@@ -45,3 +45,6 @@ ls
 
 crontab -l
 crontab -r
+find /var/log/vnstat_logs -name 'bandwidth_usage_*.csv' -type f -mtime +0 -exec rm {} \;
+
+
