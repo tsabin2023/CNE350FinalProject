@@ -16,11 +16,7 @@ sudo chmod o+w /var/log/vnstat_logs
 
 sudo chmod +x CNE350FinalBASH.sh
 
-sudo chmod +x Delete_old_files.sh
-
 sudo chmod +x run_cronjob.sh
-
-sudo chmod +x ./run_cronjob.sh
 
 
 # modify bash script / part 1 file - the inferface
