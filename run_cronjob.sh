@@ -2,7 +2,6 @@
 
 # source https://www.baeldung.com/linux/bandwidth-usage-monitoring
 # source https://www.geeksforgeeks.org/find-command-in-linux-with-examples/#
-# source https://www.geeksforgeeks.org/vnstat-command-in-linux-with-examples/#
 # source Brian Huang
 # code modified by Tyler Sabin
 
