@@ -4,6 +4,7 @@ note it is assumed you have a Raspberry Pi 2w already set up and running with th
 https://www.raspberrypi.com/documentation/computers/getting-started.html
 It is also assumed you know how to access and navigate your Raspberry Pi treminal and directory.
 In addition it is assumed you have sudo privileges on your account and know your sudo password.
+Another assumption is that you know how to find your interface from what ifconfig displays.
 
 Step 1. In your Raspberri Pi terminal.
 git clone https://github.com/tsabin2023/CNE350FinalProject
@@ -35,8 +36,8 @@ sudo chmod +x run_cronjob.sh
 
 ifconfig - select the interface you want to record, in my case it is wlan0. Write down your case sensative interface.
 
-sudo nano CNE350FinalBASH - modify the interface, same line as the comment. In my case replacing it is wlan0
-
+sudo nano CNE350FinalBASH.sh - modify the interface, same line as the comment. In my case replacing it is wlan0
+if this file is blank, copy and paste contents of CNE350FinalBASH.sh and change interface to yours on the line with the comment. Press control o and hit enter, then press control x. Then sudo chmod +x CNE350FinalBASH.sh
 
 # how to run the cronjob
 
