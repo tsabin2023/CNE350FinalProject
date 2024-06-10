@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # source https://www.baeldung.com/linux/bandwidth-usage-monitoring
-# https://www.geeksforgeeks.org/vnstat-command-in-linux-with-examples/#
+# source https://www.geeksforgeeks.org/vnstat-command-in-linux-with-examples/#
 # source Brian Huang
 # code modified by Tyler Sabin
 
