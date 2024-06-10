@@ -8,7 +8,7 @@ LOG=/var/log/vnstat_logs/bandwidth_usage_$(date +%Y%m%d_%I%M%S_%p).csv
 
 echo -n "$(date --rfc-3339=date)," >> $LOG
 
-awk '/^\s*enp0s3:/ { # UPDATE THIS, REPLACE THE INTERFACE (e.g. replace enp0s3)
+awk '/^\s*enp0s3:/ { # UPDATE THIS, REPLACE THE INTERFACE (e.g. replace enp0s3 with your written down interface)
     RX=$2/1024/1024
     TX=$10/1024/1024
     TOTAL=RX+TX
