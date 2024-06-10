@@ -1,9 +1,15 @@
 # setup
 
+note it is assumed you have a Raspberry Pi 2w already set up and running with the 64 bit OS vesion
+https://www.raspberrypi.com/documentation/computers/getting-started.html
+
+Step 1. 
 git clone https://github.com/tsabin2023/CNE350FinalProject
 
+Step 2.
 cd CNE350FinalProject
 
+Step 3. 
 (all commands below are executed inside CNE350FinalProject directory)
 
 sudo apt update
