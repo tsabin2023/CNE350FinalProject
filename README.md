@@ -33,11 +33,8 @@ sudo chmod +x run_cronjob.sh
 
 # modify bash script / part 1 file - the inferface
 
-
 ifconfig - select the interface you want to record, in my case it is wlan0. Write down your case sensative interface.
 
-sudo nano CNE350FinalBASH.sh - modify the interface, same line as the comment. In my case replacing it is wlan0
-if this file is blank, copy and paste contents of CNE350FinalBASH.sh and change interface to yours on the line with the comment. Press control o and hit enter, then press control x. Then sudo chmod +x CNE350FinalBASH.sh
 
 # how to run the cronjob
 
