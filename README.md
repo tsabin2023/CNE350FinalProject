@@ -19,6 +19,9 @@ sudo apt update
 sudo apt install -y vnstat
 
 sudo mkdir /var/log/vnstat_logs
+You may get an alert saying you already have this file and can confirm its existance with 
+ls -ld /var/log/vnstat_logs
+Then after confirming its existance proceed to the command below. 
 
 sudo chmod o+w /var/log/vnstat_logs
 
@@ -30,9 +33,9 @@ sudo chmod +x run_cronjob.sh
 # modify bash script / part 1 file - the inferface
 
 
-ifconfig - select the interface you want to record
+ifconfig - select the interface you want to record, in my case it is wlan0. Write down your case sensative interface.
 
-sudo nano CNE350FinalBASH - modify the interface, same line as the comment
+sudo nano CNE350FinalBASH - modify the interface, same line as the comment. In my case replacing it is wlan0
 
 
 # how to run the cronjob
