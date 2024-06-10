@@ -1,9 +1,10 @@
 # setup
 
-note it is assumed you have a Raspberry Pi 2w already set up and running with the 64 bit OS vesion
+note it is assumed you have a Raspberry Pi 2w already set up and running with the 64 bit OS vesion.
 https://www.raspberrypi.com/documentation/computers/getting-started.html
+It is also assumed you know how to access and navigate your Raspberry Pi treminal and directory.
 
-Step 1. 
+Step 1. In your Raspberri Pi terminal
 git clone https://github.com/tsabin2023/CNE350FinalProject
 
 Step 2.
