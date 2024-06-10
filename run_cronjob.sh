@@ -1,4 +1,4 @@
-!/bin/bash
+#!/bin/bash
 
 # source https://www.baeldung.com/linux/bandwidth-usage-monitoring
 # source https://www.geeksforgeeks.org/find-command-in-linux-with-examples/#
