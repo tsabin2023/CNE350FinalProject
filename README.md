@@ -5,6 +5,7 @@ https://www.raspberrypi.com/documentation/computers/getting-started.html
 It is also assumed you know how to access and navigate your Raspberry Pi treminal and directory.
 In addition it is assumed you have sudo privileges on your account and know your sudo password.
 Another assumption is that you know how to find your interface from what ifconfig displays.
+All commands giver are in the Raspberry Pi terminal and instructions will give proper directory.
 
 Step 1. In your Raspberri Pi terminal.
 git clone https://github.com/tsabin2023/CNE350FinalProject
@@ -38,13 +39,24 @@ ifconfig - select the interface you want to record, in my case it is wlan0. Writ
 
 # how to run the cronjob
 
+note this command may have to be run everytime the system is powered on or restarted
+
+cd CNE350FinalProject
+
+then
+
 ./run_cronjob.sh
 
+# to verify the cronjob is running
+
+crontab -l
 
 
 # to verify / check your log files
 
 cd /var/log/vnstat_logs
+
+now that you have changed directories, enter the command below 
 
 ls
 
@@ -52,7 +64,6 @@ ls
 
 # extra commands
 
-crontab -l
 crontab -r
 find /var/log/vnstat_logs -name 'bandwidth_usage_*.csv' -type f -mtime +0 -exec rm {} \;
 
