@@ -60,7 +60,26 @@ now that you have changed directories, enter the command below
 
 ls
 
+if you want to look at a specific file, type nano and the name of the file, e.g. nano bandwidth_usage_20240611_125901_PM.csv
 
+and my example of the contents of the file is this.
+
+```
+024-06-11,
+
+RX:  1028.54  MiB
+
+ TX:  31.8216  MiB
+
+ Total (RX + TX):  1060.36
+```
+
+Press control and x to exit the file when finished. 
+
+The unit of measurement is MiB stands for Mebibyte and is equal to 2^20 bytes, or 1,048,576 bytes. This is different than Megabyte (MB), which is equal to 10^6 bytes, or 1,000,000 bytes.
+
+RX stands for recieving, so in this context, it is the download rate.
+TX stands for transmit, which in this context is the upload rate. 
 
 # extra commands
 
