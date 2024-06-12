@@ -108,6 +108,9 @@ TX stands for transmit, which in this context is the upload rate.
 
 crontab -r
 
+find /var/log/vnstat_logs -name "bandwidth_usage_*.csv" -type f -mtime 1 -exec rm {} \;
+
+
 Documentation 
 
 https://github.com/vergoh/vnstat
