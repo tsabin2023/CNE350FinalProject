@@ -64,7 +64,7 @@ if promted, pick 1 and hit enter.
 
 below the first cronjob copy and paste
 
-0 0 * * * ~/CNE350FinalProject/delete_old_csv.sh
+0 0 * * * ~/CNE350FinalProject/delete_old_csv.sh;
 
 write out control o
 
