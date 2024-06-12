@@ -6,6 +6,7 @@ It is also assumed you know how to access and navigate your Raspberry Pi tremina
 In addition it is assumed you have sudo privileges on your account and know your sudo password.
 Another assumption is that you know how to find your interface from what ifconfig displays.
 All commands giver are in the Raspberry Pi terminal and instructions will give proper directory.
+Assumes user knows to hit enter on commands that require it and that user is vary familar with BASH and Rasbian OS for navigating and modifying files. 
 
 Step 1. In your Raspberri Pi terminal.
 git clone https://github.com/tsabin2023/CNE350FinalProject
@@ -51,7 +52,25 @@ then
 
 ./run_cronjob.sh
 
-# to verify the cronjob is running
+# how to run second clean up cron job
+
+cd CNE350FinalProject
+
+./delete_old_csv.sh
+
+crontab -e
+
+if promted, pick 1 and hit enter. 
+
+below the first cronjob copy and paste
+
+0 0 * * * ~/CNE350FinalProject/delete_old_csv.sh
+
+write out control o
+
+exit control x
+
+# to verify the cronjobs are running
 
 crontab -l
 
@@ -85,12 +104,12 @@ The unit of measurement is MiB stands for Mebibyte and is equal to 2^20 bytes, o
 RX stands for recieving, so in this context, it is the download rate.
 TX stands for transmit, which in this context is the upload rate. 
 
-# extra commands
+# extra command/s
 
 crontab -r
-find /var/log/vnstat_logs -name 'bandwidth_usage_*.csv' -type f -mtime +0 -exec rm {} \;
 
 Documentation 
 
 https://github.com/vergoh/vnstat
 
+Kim Rhodes
