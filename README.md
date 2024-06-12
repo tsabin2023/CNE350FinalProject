@@ -31,6 +31,8 @@ sudo chmod +x CNE350FinalBASH.sh
 
 sudo chmod +x run_cronjob.sh
 
+sudo chmod +x delete_old_csv.sh
+
 Note you may have to replace the relative path with your absolute path in CNE350FinalBASH.sh and/or run_cronjob.sh for this to work on your Raspberry Pi 2w. 
 
 
