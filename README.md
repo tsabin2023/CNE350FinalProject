@@ -7,6 +7,7 @@ In addition it is assumed you have sudo privileges on your account and know your
 Another assumption is that you know how to find your interface from what ifconfig displays.
 All commands giver are in the Raspberry Pi terminal and instructions will give proper directory.
 Assumes user knows to hit enter on commands that require it and that user is vary familar with BASH and Rasbian OS for navigating and modifying files. 
+Note some cammands may need sudo in front of then if they don not run properly. 
 
 Step 1. In your Raspberri Pi terminal.
 git clone https://github.com/tsabin2023/CNE350FinalProject
