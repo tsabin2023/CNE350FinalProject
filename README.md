@@ -29,6 +29,8 @@ Then after confirming its existance proceed to the command below.
 
 sudo chmod o+w /var/log/vnstat_logs
 
+sudo chmod -R +rw /var/log/vnstat_logs
+
 sudo chmod +x CNE350FinalBASH.sh
 
 sudo chmod +x run_cronjob.sh
