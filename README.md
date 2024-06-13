@@ -159,6 +159,9 @@ chmod -R +rw /var/log/vnstat_logs/cron_env.log
 
 chmod -x /var/log/vnstat_logs/cron_env.log
 
+maybe try 
+sudo chmod +x /var/log/vnstat_logs
+
 
 Documentation 
 
