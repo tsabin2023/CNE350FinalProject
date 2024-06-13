@@ -141,14 +141,18 @@ ls -1 /var/log/vnstat_logs | tail -n 10
 
 # extra command/s
 
+If you want to remove all cron jobs
+```
 crontab -r
-
+```
+If you want to manully remove the cvs files this project creates that are 24hrs old and older.
+```
 find /var/log/vnstat_logs -name "bandwidth_usage_*.csv" -type f -mtime 1 -exec rm {} \;
-
+```
+If you need to debug, this logs the enviroment of /var/log/vnstat_logs/
+```
 env > /var/log/vnstat_logs/cron_env.log
-
-sudo chmod o+w /var/log/vnstat_logs/
-
+```
 
 Documentation 
 
