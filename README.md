@@ -111,6 +111,10 @@ crontab -r
 
 find /var/log/vnstat_logs -name "bandwidth_usage_*.csv" -type f -mtime 1 -exec rm {} \;
 
+env > /var/log/vnstat_logs/cron_env.log
+
+sudo chmod o+w /var/log/vnstat_logs/
+
 
 Documentation 
 
