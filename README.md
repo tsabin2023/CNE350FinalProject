@@ -134,6 +134,11 @@ If you want a list of the first 10 files
 ls -1 /var/log/vnstat_logs | head -n 10
 ```
 
+If you want a list of the last 10 files
+```
+ls -1 /var/log/vnstat_logs | tail -n 10
+```
+
 # extra command/s
 
 crontab -r
