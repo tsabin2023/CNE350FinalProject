@@ -153,6 +153,7 @@ If you need to debug, this logs the enviroment of /var/log/vnstat_logs/
 ```
 env > /var/log/vnstat_logs/cron_env.log
 ```
+chmod o+w /var/log/vnstat_logs/cron_env.log
 
 Documentation 
 
