@@ -40,7 +40,29 @@ Note you may have to replace the relative path with your absolute path in CNE350
 
 # modify bash script / part 1 file - the inferface
 
-ifconfig - select the interface you want to record, in my case it is wlan0. Write down your case sensative interface.
+ifconfig - select the interface you want to record, in my case it is wlan0. Write down your case sensative interface. 
+
+On the next line type
+``` 
+nano CNE350FinalBASH.sh
+```
+On the line that says
+```
+awk '/^\s*enp0s3:/ { # UPDATE THIS, REPLACE THE INTERFACE (e.g. replace enp0s3 with your written down interface)
+```
+replace enp0s3 with your written down interface, in my case I replace it with wlan0
+
+Now press
+```
+control 0
+```
+And hit enter
+
+Now press
+```
+control x
+```
+And hit enter
 
 
 # how to run the cronjob
