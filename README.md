@@ -155,6 +155,8 @@ env > /var/log/vnstat_logs/cron_env.log
 ```
 chmod o+w /var/log/vnstat_logs/cron_env.log
 
+chmod -R +rw /var/log/vnstat_logs/cron_env.log
+
 Documentation 
 
 https://github.com/vergoh/vnstat
