@@ -129,6 +129,11 @@ The unit of measurement is MiB stands for Mebibyte and is equal to 2^20 bytes, o
 RX stands for recieving, so in this context, it is the download rate.
 TX stands for transmit, which in this context is the upload rate. 
 
+If you want a list of the first 10 files
+```
+ls -1 /var/log/vnstat_logs | head -n 10
+```
+
 # extra command/s
 
 crontab -r
