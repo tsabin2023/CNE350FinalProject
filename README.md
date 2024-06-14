@@ -139,13 +139,9 @@ See example below of where to place your version of the code above into your cro
 * * * * * /home/vboxuser/CNE350FinalProject/CNE350FinalBASH.sh
 
 ```
-Write out. 
-```
-control o
-```
-Exit. 
-```
-control x
+To write out press control o.
+
+To exit press control o.
 
 # To verify the cronjobs are running
 ```
