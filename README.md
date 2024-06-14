@@ -148,6 +148,8 @@ ls -1 /var/log/vnstat_logs | tail -n 10
 
 # extra command/s
 
+cd ..
+
 If you want to remove all cron jobs
 ```
 crontab -r
