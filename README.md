@@ -73,9 +73,8 @@ pwd
 '''
 Here is an example of where I ran pwd and its output.
 ```
-boxuser@UbuntuW4CNE370:~/CNE350FinalProject$ pwd
-
-/home/vboxuser/CNE350FinalProject
+sabin@raspberrypi:~/CNE350FinalProject $ pwd
+/home/sabin/CNE350FinalProject
 ```
 The second line is your absolute path, so copy and paste it into a txt file editor, e.g. notepad
 
