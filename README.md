@@ -168,10 +168,8 @@ RX:  1028.54  MiB
  Total (RX + TX):  1060.36
 ```
 
-To exit the file when finished.
-```
-control x
-```
+To exit the file when finished, press control x.
+
 # Additional fact and optional testing
 The unit of measurement is MiB stands for Mebibyte and is equal to 2^20 bytes, or 1,048,576 bytes. This is different than Megabyte (MB), which is equal to 10^6 bytes, or 1,000,000 bytes.
 
