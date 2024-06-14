@@ -18,7 +18,7 @@ git clone https://github.com/tsabin2023/CNE350FinalProject
 ```
 cd CNE350FinalProject
 ```
-Step 3. For all commands starting with sudo, you may have to type in your sudo password,
+For all commands starting with sudo, you may have to type in your sudo password,
 (all commands below are executed inside CNE350FinalProject directory).
 ```
 sudo apt update
@@ -60,17 +60,9 @@ awk '/^\s*enp0s3:/ { # UPDATE THIS, REPLACE THE INTERFACE (e.g. replace enp0s3 w
 ```
 Replace enp0s3 with your written down interface, in my case I replace it with wlan0.
 
-Now press.
-```
-control 0
-```
-And hit enter.
+Now press, control 0 and hit enter.
 
-Now press.
-```
-control x
-```
-And hit enter.
+Now press, control x and hit enter.
 
 
 # How to run CNE350FinalBASH.sh
