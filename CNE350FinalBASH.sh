@@ -3,7 +3,7 @@
 # source https://www.baeldung.com/linux/bandwidth-usage-monitoring
 # source https://www.geeksforgeeks.org/vnstat-command-in-linux-with-examples/
 # source Brian Huang
-# Nick
+# source Nick
 # code modified by Tyler Sabin
 
 LOG=/var/log/vnstat_logs/bandwidth_usage_$(date +%Y%m%d_%I%M%S_%p).csv
