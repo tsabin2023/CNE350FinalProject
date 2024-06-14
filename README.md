@@ -17,15 +17,20 @@ cd CNE350FinalProject
 
 Step 3. For all commands starting with sudo, you may have to type in your sudo password.
 (all commands below are executed inside CNE350FinalProject directory)
-
+```
 sudo apt update
 
 sudo apt install -y vnstat
 
 sudo mkdir /var/log/vnstat_logs
+```
 You may get an alert saying you already have this file and can confirm its existance with 
+```
 ls -ld /var/log/vnstat_logs
+```
 Then after confirming its existance proceed to the command below. 
+```
+sudo chmod +x /var/log/vnstat_logs
 
 sudo chmod o+w /var/log/vnstat_logs
 
@@ -38,7 +43,7 @@ sudo chmod +x run_cronjob.sh
 sudo chmod +x delete_old_csv.sh
 
 sudo chmod +rwx delete_old_csv.sh
-
+```
 Note you may have to replace the relative path with your absolute path in CNE350FinalBASH.sh and/or run_cronjob.sh for this to work on your Raspberry Pi 2w. 
 
 
@@ -72,13 +77,13 @@ And hit enter
 # how to run the cronjob
 
 note this command may have to be run everytime the system is powered on or restarted
-
+```
 cd CNE350FinalProject
-
+```
 then
-
+```
 ./run_cronjob.sh
-
+```
 # how to run second clean up cron job
 
 cd CNE350FinalProject
