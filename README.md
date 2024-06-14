@@ -140,7 +140,7 @@ See example below of where to place your version of the code above into your cro
 ```
 To write out press control o.
 
-To exit press control o.
+To exit press control x.
 
 # To verify the cronjobs are running
 ```
