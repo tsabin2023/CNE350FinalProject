@@ -16,3 +16,7 @@ awk '/^\s*enp0s3:/ { # UPDATE THIS, REPLACE THE INTERFACE (e.g. replace enp0s3 w
     TOTAL=RX+TX
     print "\nRX: " , RX , " MiB\n" , "TX: " , TX ," MiB\n" , "Total (RX + TX): " , TOTAL
 }' /proc/net/dev >> $LOG
+
+find /var/log/vnstat_logs -name "bandwidth_usage_*.csv" -type f -mmin +15 -exec rm {} \;
+
+echo "Log files older than 15min have been removed"
