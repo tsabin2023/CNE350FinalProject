@@ -19,4 +19,4 @@ awk '/^\s*enp0s3:/ { # UPDATE THIS, REPLACE THE INTERFACE (e.g. replace enp0s3 w
 
 find /var/log/vnstat_logs -name "bandwidth_usage_*.csv" -type f -mmin +5 -exec rm {} \;
 
-echo "Log files older than 5min have been removed"
+echo "Log files older than 5 min have been removed"
