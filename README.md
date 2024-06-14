@@ -1,3 +1,5 @@
+# Introduction
+
 # Setup
 
 note it is assumed you have a Raspberry Pi 2w already set up and running with the 64 bit OS vesion.
@@ -39,13 +41,8 @@ sudo chmod -R +rw /var/log/vnstat_logs
 
 sudo chmod +x CNE350FinalBASH.sh
 
-sudo chmod +x run_cronjob.sh
-
-sudo chmod +x delete_old_csv.sh
-
-sudo chmod +rwx delete_old_csv.sh
 ```
-Note you may have to replace the relative path with your absolute path in CNE350FinalBASH.sh and/or run_cronjob.sh for this to work on your Raspberry Pi 2w. 
+Note you may have to replace the relative path with your absolute path in CNE350FinalBASH.sh for this to work on your Raspberry Pi 2w. 
 
 
 # Modify bash script / part 1 file - the inferface
@@ -76,32 +73,80 @@ control x
 And hit enter.
 
 
-# How to run the cronjob
+# How to run CNE350FinalBASH.sh
 
-Note this command may have to be run everytime the system is powered on or restarted.
+You will need you absolote path to CNE350FinalProject. 
+'''
+pwd
+'''
+Here is an example of where I ran pwd and its output.
 ```
-cd CNE350FinalProject
+boxuser@UbuntuW4CNE370:~/CNE350FinalProject$ pwd
+
+/home/vboxuser/CNE350FinalProject
 ```
-Then.
-```
-./run_cronjob.sh
-```
-# How to run second clean up cron job
-```
-cd CNE350FinalProject
-```
-```
-./delete_old_csv.sh
-```
+The second line is your absolute path, so copy and paste it into a txt file editor, e.g. notepad
+
+To add it as a cronjob
 ```
 crontab -e
 ```
-If promted, pick 1 and hit enter. 
+In the folder on the bottom line you will need to ad 5 * then your absolute path with to the BASH file, eg
 
-Below the first cronjob copy and paste this second cronjob
+```
+* * * * * /home/vboxuser/CNE350FinalProject/CNE350FinalBASH.sh
+```
+See example below of where to place your version of the code above into your cronjob file. 
+```
+# Edit this file to introduce tasks to be run by cron.
 
-*/5 * * * * ~/CNE350FinalProject/delete_old_csv.sh
+# 
 
+# Each task to run has to be defined through a single line
+
+# indicating with different fields when the task will be run
+
+# and what command to run for the task
+
+# 
+
+# To define the time you can provide concrete values for
+
+# minute (m), hour (h), day of month (dom), month (mon),
+
+# and day of week (dow) or use '*' in these fields (for 'any').
+
+# 
+
+# Notice that tasks will be started based on the cron's system
+
+# daemon's notion of time and timezones.
+
+# 
+
+# Output of the crontab jobs (including errors) is sent through
+
+# email to the user the crontab file belongs to (unless redirected).
+
+# 
+
+# For example, you can run a backup of all your user accounts
+
+# at 5 a.m every week with:
+
+# 0 5 * * 1 tar -zcf /var/backups/home.tgz /home/
+
+# 
+
+# For more information see the manual pages of crontab(5) and cron(8)
+
+# 
+
+# m h  dom mon dow   command
+
+* * * * * /home/vboxuser/CNE350FinalProject/CNE350FinalBASH.sh
+
+```
 Write out. 
 ```
 control o
@@ -109,7 +154,7 @@ control o
 Exit. 
 ```
 control x
-```
+
 # To verify the cronjobs are running
 ```
 crontab -l
@@ -168,22 +213,15 @@ If you want to manully remove the cvs files this project creates that are 24hrs 
 ```
 find /var/log/vnstat_logs -name "bandwidth_usage_*.csv" -type f -mtime 1 -exec rm {} \;
 ```
-I think this caused error
-If you need to debug, this logs the enviroment of /var/log/vnstat_logs/
-```
-env > /var/log/vnstat_logs/cron_env.log
-```
-chmod o+w /var/log/vnstat_logs/cron_env.log
-
-chmod -R +rw /var/log/vnstat_logs/cron_env.log
-
-chmod -x /var/log/vnstat_logs/cron_env.log
-
-maybe try 
-find /var/log/vnstat_logs -name 'bandwidth_usage_*.csv' -type f -mmin +5 -exec rm {} \;
 
 Documentation 
 
 https://github.com/vergoh/vnstat
 
+https://www.baeldung.com/linux/bandwidth-usage-monitoring
+
 Kim Rhodes
+
+Brian Huang
+
+Nick
