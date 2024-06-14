@@ -85,7 +85,7 @@ crontab -e
 In the folder on the bottom line you will need to ad 5 * then your absolute path with to the BASH file, eg
 
 ```
-* * * * * /home/vboxuser/CNE350FinalProject/CNE350FinalBASH.sh
+* * * * * /home/sabin/CNE350FinalProject/CNE350FinalBASH.sh
 ```
 See example below of where to place your version of the code above into your cronjob file. 
 ```
@@ -135,7 +135,7 @@ See example below of where to place your version of the code above into your cro
 
 # m h  dom mon dow   command
 
-* * * * * /home/vboxuser/CNE350FinalProject/CNE350FinalBASH.sh
+* * * * * * * * * * /home/sabin/CNE350FinalProject/CNE350FinalBASH.sh
 
 ```
 To write out press control o.
