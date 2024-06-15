@@ -1,5 +1,9 @@
 # Introduction
 
+This Project logs Bandwidth usage of a Raspberry Pi 2w for documenting changes in bandwidth and stores it in a csv file. 
+It is currently set up to run every minute and delete any files that are over five minutes.
+This project can be altered to check bandwith to run at a different time interval and store files for a different length of time.
+
 # Setup
 
 note it is assumed you have a Raspberry Pi 2w already set up and running with the 64 bit OS vesion.
@@ -187,18 +191,12 @@ ls -1 /var/log/vnstat_logs | tail -n 10
 
 # Extra command/s
 
-cd ..
-
 If you want to remove all cron jobs
 ```
 crontab -r
 ```
-If you want to manully remove the cvs files this project creates that are 24hrs old and older.
-```
-find /var/log/vnstat_logs -name "bandwidth_usage_*.csv" -type f -mtime 1 -exec rm {} \;
-```
 
-Documentation 
+# Documentation 
 
 https://github.com/vergoh/vnstat
 
