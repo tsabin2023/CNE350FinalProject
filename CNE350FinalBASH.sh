@@ -12,7 +12,7 @@ LOG="/var/log/vnstat_logs/bandwidth_usage_$(date +%Y%m%d_%I%M%S_%p).csv"
 
 echo -n "$(date --rfc-3339=date)," >> "$LOG"
 
-# Replace 'wlan0' with your actual network interface name, e.g., 'wlan0' for Wi-Fi
+# UPDATE THIS, REPLACE THE INTERFACE (e.g. replace wlan0 with your written down interface)
 awk -v interface="wlan0" '
     $1 == interface ":" {
         RX=$2/1024/1024
