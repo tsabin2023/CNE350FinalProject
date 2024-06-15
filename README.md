@@ -44,7 +44,6 @@ sudo chmod +x CNE350FinalBASH.sh
 ```
 Note you may have to replace the relative path with your absolute path in CNE350FinalBASH.sh for this to work on your Raspberry Pi 2w. 
 
-
 # Modify bash script / part 1 file - the inferface
 To find the interface you want to select and record, in my case it is wlan0. Note, write down your case sensative interface
 ```
@@ -54,16 +53,16 @@ On the next line type.
 ``` 
 nano CNE350FinalBASH.sh
 ```
-On the line that says.
+On the lines that say.
 ```
-awk '/^\s*enp0s3:/ { # UPDATE THIS, REPLACE THE INTERFACE (e.g. replace enp0s3 with your written down interface)
+# UPDATE THIS, REPLACE THE INTERFACE (e.g. replace wlan0 with your written down interface)
+awk -v interface="wlan0" '
 ```
-Replace enp0s3 with your written down interface, in my case I replace it with wlan0.
+Replace wlan0 with your written down interface, in my case I replace it with wlan0.
 
 Now press, control 0 and hit enter.
 
 Now press, control x and hit enter.
-
 
 # How to run CNE350FinalBASH.sh
 
@@ -204,6 +203,10 @@ Documentation
 https://github.com/vergoh/vnstat
 
 https://www.baeldung.com/linux/bandwidth-usage-monitoring
+
+https://www.geeksforgeeks.org/vnstat-command-in-linux-with-examples/
+
+https://www.geeksforgeeks.org/find-command-in-linux-with-examples/
 
 Kim Rhodes
 
