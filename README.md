@@ -1,19 +1,20 @@
 # Introduction
 
-This Project logs Bandwidth usage of a Raspberry Pi 2w for documenting changes in bandwidth and stores it in a csv file. 
+This Project uses vnsat to log Bandwidth usages of a Raspberry Pi 2w for documenting changes in bandwidth and stores it in a csv file. 
 It is currently set up to run every minute and delete any files that are over five minutes.
 This project can be altered to check bandwith to run at a different time interval and store files for a different length of time.
 
 # Setup
+Prerequisites
 
-note it is assumed you have a Raspberry Pi 2w already set up and running with the 64 bit OS vesion.
+ - Raspberry Pi 2w already set up and running with the 64 bit OS vesion.
 https://www.raspberrypi.com/documentation/computers/getting-started.html
-It is also assumed you know how to access and navigate your Raspberry Pi treminal and directory.
-In addition it is assumed you have sudo privileges on your account and know your sudo password.
-Another assumption is that you know how to find your interface from what ifconfig displays.
-All commands giver are in the Raspberry Pi terminal and instructions will give proper directory.
-Assumes user knows to hit enter on commands that require it and that user is vary familar with BASH and Rasbian OS for navigating and modifying files. 
-Note some cammands may need sudo in front of then if they don not run properly. 
+ - Raspberry Pi OS, treminal directory, navigational, and command execution kowledge.
+ - sudo privileges on your account and know your sudo password.
+ - interface identification knowledge with ifconfig.
+ - nano BASH file modification knowledge.
+    
+Note some cammands may need sudo in front of then if they don not run properly.
 
 In your Raspberri Pi terminal, install Git if you have not already and copy/paste the commands.
 ```
