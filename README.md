@@ -1,20 +1,20 @@
 # Introduction
 
 This Project uses vnsat to log Bandwidth usages of a Raspberry Pi 2w for documenting changes in bandwidth and stores it in a csv file. 
-It is currently set up to run every minute and delete any files that are over five minutes.
+It is currently set up to run every minute and delete any files that are over five minutes old.
 This project can be altered to check bandwith to run at a different time interval and store files for a different length of time.
 
 # Setup
 Prerequisites
 
  - Raspberry Pi 2w already set up and running with the 64 bit OS vesion.
-https://www.raspberrypi.com/documentation/computers/getting-started.html
+[Getting Started with Raspberry Pi](https://www.raspberrypi.com/documentation/computers/getting-started.html)
  - Raspberry Pi OS, treminal directory, navigational, and command execution kowledge.
  - sudo privileges on your account and know your sudo password.
  - interface identification knowledge with ifconfig.
  - nano BASH file modification knowledge.
     
-Note some cammands may need sudo in front of then if they don not run properly.
+Note some commands may need sudo in front of then if they don not run properly.
 
 In your Raspberri Pi terminal, install Git if you have not already and copy/paste the commands.
 ```
@@ -50,7 +50,7 @@ sudo chmod +x CNE350FinalBASH.sh
 Note you may have to replace the relative path with your absolute path in CNE350FinalBASH.sh for this to work on your Raspberry Pi 2w. 
 
 # Modify bash script / part 1 file - the inferface
-To find the interface you want to select and record, in my case it is wlan0. Note, write down your case sensative interface
+To find the interface you want to select and record, in my case it is wlan0. Note, write down your case sensative interface.
 ```
 ifconfig
 ```
@@ -71,7 +71,7 @@ Now press, control x and hit enter.
 
 # How to run CNE350FinalBASH.sh
 
-You will need you absolote path to CNE350FinalProject. 
+You will need to find your absolote path to CNE350FinalProject. 
 '''
 pwd
 '''
@@ -80,13 +80,13 @@ Here is an example of where I ran pwd and its output.
 sabin@raspberrypi:~/CNE350FinalProject $ pwd
 /home/sabin/CNE350FinalProject
 ```
-The second line is your absolute path, so copy and paste it into a txt file editor, e.g. notepad
+The second line of your actual terminal output is your absolute path, so copy and paste it into a txt file editor, e.g. notepad.
 
-To add it as a cronjob
+To add it as a cronjob.
 ```
 crontab -e
 ```
-In the folder on the bottom line you will need to ad 5 * then your absolute path with to the BASH file, eg
+In the folder on the bottom line you will need to ad 5 * then your absolute path with to the BASH file, eg.
 
 ```
 * * * * * /home/sabin/CNE350FinalProject/CNE350FinalBASH.sh
@@ -180,19 +180,19 @@ The unit of measurement is MiB stands for Mebibyte and is equal to 2^20 bytes, o
 RX stands for recieving, so in this context, it is the download rate.
 TX stands for transmit, which in this context is the upload rate. 
 
-If you want a list of the first 10 files
+If you want a list of the first 10 files.
 ```
 ls -1 /var/log/vnstat_logs | head -n 10
 ```
 
-If you want a list of the last 10 files
+If you want a list of the last 10 files.
 ```
 ls -1 /var/log/vnstat_logs | tail -n 10
 ```
 
 # Extra command/s
 
-If you want to remove all cron jobs
+If you want to remove all cron jobs.
 ```
 crontab -r
 ```
@@ -200,6 +200,8 @@ crontab -r
 # Documentation 
 
 https://github.com/vergoh/vnstat
+[vnStat GitHub Repository](https://github.com/vergoh/vnstat)
+
 
 https://www.baeldung.com/linux/bandwidth-usage-monitoring
 
