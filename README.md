@@ -201,15 +201,18 @@ crontab -r
 
 [vnStat GitHub Repository](https://github.com/vergoh/vnstat)
 
-https://www.baeldung.com/linux/bandwidth-usage-monitoring
 [Baeldung: Bandwidth Usage Monitoring on Linux](https://www.baeldung.com/linux/bandwidth-usage-monitoring)
 
-https://www.geeksforgeeks.org/vnstat-command-in-linux-with-examples/
+[GeeksforGeeks: vnStat Command in Linux with Examples](https://www.geeksforgeeks.org/vnstat-command-in-linux-with-examples/)
 
-https://www.geeksforgeeks.org/find-command-in-linux-with-examples/
+[GeeksforGeeks: find Command in Linux with Examples](https://www.geeksforgeeks.org/find-command-in-linux-with-examples/)
 
 Kim Rhodes
 
 Brian Huang
 
 Nick
+
+# Special Thanks
+
+Special thanks to Kim Rhodes, Brian Huang, and Nick for all their help and support on this project. 
