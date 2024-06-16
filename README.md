@@ -199,11 +199,10 @@ crontab -r
 
 # Documentation 
 
-https://github.com/vergoh/vnstat
 [vnStat GitHub Repository](https://github.com/vergoh/vnstat)
 
-
 https://www.baeldung.com/linux/bandwidth-usage-monitoring
+[Baeldung: Bandwidth Usage Monitoring on Linux](https://www.baeldung.com/linux/bandwidth-usage-monitoring)
 
 https://www.geeksforgeeks.org/vnstat-command-in-linux-with-examples/
 
