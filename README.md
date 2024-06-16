@@ -217,4 +217,4 @@ Nick
 
 # Special Thanks
 
-Special thanks to Kim Rhodes, Brian Huang, and Nick for all their help and support on this project. 
+Special thanks to Kim Rhodes, Brian Huang, Nick, and Igor Nikolaev for all their help and support on this project. 
