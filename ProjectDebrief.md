@@ -1,3 +1,17 @@
+I thought this project would be easy, but instead I had to overcome many challenges. 
+The first was that my Pi ran GUI's vary slowly, so I had to learn what vnstat was in order to record the bandwidth from the terminal.
+
+My code automation files would only run manually and I tried having a file run another file, but the automation would only run part of my file, so I split it into two files. When I tried running two automation files in crontab, only one would run. Running them in different orders did not work.
+
+I believe this did not work because both files were trying to access the same file at the same time, so I offset when the files would run. This also did not fix the issue.
+
+Then I tried running one file and manully putting only that file in crontab and finally the cronjob ran.
+
+My next issue was that it only worked on my Ubuntu maching, but not my Raspberry Pi.
+
+This led me to understanding the syntax differnces between the two operating systems and I had to rewrite some of my code. 
+After that, the script ran smoothly.
+
 Code I have tried to use running 2 cron jobs at the same time. 
 
 CNE350FinalBASH.sh  
