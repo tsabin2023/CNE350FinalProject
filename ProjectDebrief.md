@@ -1,3 +1,21 @@
+# Intended functionality
+
+Use a GUI, script/s, and/or a program to monitor and record my upload and download rate to trouble shoot internet connectivity issues on a Raspberry Pi 2w. Then report the results to my internet provider to debug my reduced internet speeds. 
+
+# Goals
+
+Primary, was to install something that recorerded my bandwidth for later use.
+
+Secondary, was to write a script to install and run the program so it would be automated and easy for others to do.
+
+Tertiary, was to automate the script activation so the user would not have to run it manually at the time periods desired.
+
+#  What was accomplished
+
+After many, many hours of coding and debugging, I was able to accomplish all of my goals.
+
+#  What was a struggle point or obstacle
+
 I thought this project would be easy, but instead I had to overcome many challenges. 
 The first was that my Pi ran GUI's vary slowly, so I had to learn what vnstat was in order to record the bandwidth from the terminal.
 
@@ -12,9 +30,10 @@ My next issue was that it only worked on my Ubuntu maching, but not my Raspberry
 This led me to understanding the syntax differnces between the two operating systems and I had to rewrite some of my code. 
 After that, the script ran smoothly.
 
-Code I have tried to use running 2 cron jobs at the same time. 
+Code below is one of the three file iterations that I tried at the same time. My intent was running two cron jobs at the same time, with a third file.
 
 CNE350FinalBASH.sh  
+
 ```
 #!/bin/bash
 
@@ -74,6 +93,8 @@ echo "cron job added:"
 echo "$cron_job"
 ```
 Version that deleted but left blank files on the pi
+
+```
 #!/bin/bash
 
 # version on pi that makes empty files, but deletes old files
@@ -98,3 +119,15 @@ awk '/^\s*wlan0:/ { # UPDATE THIS, REPLACE THE INTERFACE (e.g. replace enp0s3 wi
 find /var/log/vnstat_logs -name "bandwidth_usage_*.csv" -type f -mmin +5 -exec rm {} \;
 
 echo "Log files older than 5 min have been removed"
+```
+## If you pivoted to something else during the project, explain each iteration of goals and accomplishments from beginning to end
+
+Luckily I did not have to change to a different project thought I had to look at the project a different way. First being that the GUI programs to accomplish me goal could not run on a Raspberry Pi 2w. 
+
+I then wanted to code everything myself, but quickly realized that there was not going to be enough time to accomplish this.
+
+The next was that I needed to find a terminal program to run the bandwidth.
+
+Vnsat could not do all of my goals by itself, so I had to write script/s in order to meet them. 
+
+The big lesson was finding the simplest way to accomplish my goals, which where to do some manual commands to get the script started and to only use one script to reduce errors. 
