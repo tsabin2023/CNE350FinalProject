@@ -1,6 +1,8 @@
 # Intended functionality
 
-Use a GUI, script/s, and/or a program to monitor and record my upload and download rate to trouble shoot internet connectivity issues on a Raspberry Pi 2w. Then report the results to my internet provider to debug my reduced internet speeds. 
+Use a GUI, script/s, and/or a program to monitor and record my upload and download rate to trouble shoot internet connectivity issues on a Raspberry Pi 2w.
+
+Then report the results to my internet provider to debug my reduced internet speeds. 
 
 # Goals
 
@@ -27,12 +29,14 @@ Then I tried running one file and manully putting only that file in crontab and 
 
 My next issue was that it only worked on my Ubuntu maching, but not my Raspberry Pi.
 
+Note, I had to learn to use absolote paths for commands, vnstat, and crontb for cronjobs to work.
+
 This led me to understanding the syntax differnces between the two operating systems and I had to rewrite some of my code. 
 After that, the script ran smoothly.
 
 Code below is one of the three file iterations that I tried at the same time. My intent was running two cron jobs at the same time, with a third file.
 
-CNE350FinalBASH.sh  
+### Contents of CNE350FinalBASH.sh below
 
 ```
 #!/bin/bash
@@ -54,7 +58,8 @@ awk '/^\s*enp0s3:/ { # UPDATE THIS, REPLACE THE INTERFACE (e.g. replace enp0s3)
 }' /proc/net/dev >> $LOG
 ```
 
-delete_old_csv.sh
+### Contents of delete_old_csv.sh below
+
 ```
 #!/bin/bash
 
@@ -77,7 +82,7 @@ else
 fi
 ```
 
-run_cronjob.sh  
+### Contents of run_cronjob.sh below
 
 ```
 #!/bin/bash
@@ -92,7 +97,8 @@ echo "cron job added:"
 
 echo "$cron_job"
 ```
-Version that deleted but left blank files on the pi
+
+### Contents of CNE350FinalBASH.sh improved combinng the other files but not Raspberry Pi compatiable
 
 ```
 #!/bin/bash
@@ -120,9 +126,10 @@ find /var/log/vnstat_logs -name "bandwidth_usage_*.csv" -type f -mmin +5 -exec r
 
 echo "Log files older than 5 min have been removed"
 ```
+
 ## If you pivoted to something else during the project, explain each iteration of goals and accomplishments from beginning to end
 
-Luckily I did not have to change to a different project thought I had to look at the project a different way. First being that the GUI programs to accomplish me goal could not run on a Raspberry Pi 2w. 
+Luckily I did not have to change to a different project though I had to look at the project a different way. First being that the GUI programs to accomplish my goal could not run on a Raspberry Pi 2w.
 
 I then wanted to code everything myself, but quickly realized that there was not going to be enough time to accomplish this.
 
@@ -130,4 +137,4 @@ The next was that I needed to find a terminal program to run the bandwidth.
 
 Vnsat could not do all of my goals by itself, so I had to write script/s in order to meet them. 
 
-The big lesson was finding the simplest way to accomplish my goals, which where to do some manual commands to get the script started and to only use one script to reduce errors. 
+The big lesson was finding the simplest way to accomplish my goals, which were to do some manual commands to get the script started and to only use one script to reduce errors.
